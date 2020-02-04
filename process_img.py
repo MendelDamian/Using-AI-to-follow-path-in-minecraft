@@ -22,21 +22,22 @@ def draw_lines(img):
     except:
         pass
 
+    return lines
+
 
 def process_image(processed_image):
     processed_image = cv2.Canny(processed_image, threshold1=200, threshold2=300)
     processed_image = cv2.GaussianBlur(processed_image, (5, 5), 0)
-    draw_lines(processed_image)
+    lines = draw_lines(processed_image)
 
-    return processed_image
+    return processed_image, lines
 
 
 def grab_screen(process=True):
     img = np.array(sct.grab(mon), dtype='uint8')
-    img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
     if process:
-        processed_image = process_image(img)
-
-        return processed_image
+        img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+        processed_image, lines = process_image(img)
+        return processed_image, lines
 
     return img
