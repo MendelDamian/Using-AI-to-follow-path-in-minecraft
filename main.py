@@ -59,19 +59,19 @@ def main():
             #print(predictions)
 
         # SHOWING LINES (UNNECESSARY)
-        # clear_screen = grab_screen(process=False)
-        # if not paused:
-        #     try:
-        #         for line in lines:
-        #             cords = line[0]
-        #             if cords[1] > 200 or cords[3] > 200:
-        #                 cv2.line(clear_screen, (cords[0], cords[1]), (cords[2], cords[3]), [0, 255, 0], 3)
-        #     except:
-        #         pass
-        # cv2.imshow('Window', clear_screen)
-        # if cv2.waitKey(25) & 0xFF == ord('q'):
-        #     cv2.destroyAllWindows()
-        #     break
+        clear_screen = grab_screen(process=False)
+        if not paused:
+            try:
+                for line in lines:
+                    cords = line[0]
+                    if cords[1] > 200 or cords[3] > 200:
+                        cv2.line(clear_screen, (cords[0], cords[1]), (cords[2], cords[3]), [0, 255, 0], 3)
+            except:
+                pass
+        cv2.imshow('Window', clear_screen)
+        if cv2.waitKey(25) & 0xFF == ord('q'):
+            cv2.destroyAllWindows()
+            break
         # SHOWING LINES (UNNECESSARY)  END
 
         if not paused:
