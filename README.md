@@ -1,8 +1,9 @@
 # Using AI to follow path in minecraft
+[![Image](https://i.imgur.com/fXYoz4n.jpg "Image")](https://i.imgur.com/fXYoz4n.jpg "Image")
 
 #### Overview
-Below you can see how it looks like (it can take some time to render, if wont show up, click on the link https://thumbs.gfycat.com/FrightenedSameBasenji-mobile.mp4)
-[![How it looks like](https://s5.gifyu.com/images/minecraft.gif "How it looks like")](https://s5.gifyu.com/images/minecraft.gif "How it looks like")
+Click on the link below to see how it looks like in practise
+https://thumbs.gfycat.com/FrightenedSameBasenji-mobile.mp4
 
 #### Data
 I have pre-trained model, you can find it and download it on my  [Kaggle profile](https://www.kaggle.com/myndel "Kaggle profile") and [notebook](https://www.kaggle.com/myndel/minecraft-v2-0 "notebook").
