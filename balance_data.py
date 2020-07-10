@@ -1,14 +1,12 @@
 import numpy as np
-import pandas as pd
+import cv2
 from collections import Counter
 from random import shuffle
-import cv2
 from global_var import *
 
 
 def balance_data():
     train_data = np.load(DATA_DIR, allow_pickle=True)
-
     # Look on data
     data = pd.DataFrame(train_data)
     print(data.head())
@@ -21,7 +19,6 @@ def balance_data():
     forwards = list()
 
     shuffle(train_data)
-
     for data in train_data:
         img = data[0]
         choice = data[1]

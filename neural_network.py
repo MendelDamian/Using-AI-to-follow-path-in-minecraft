@@ -1,5 +1,3 @@
-import tensorflow as tf
-from tensorflow import keras
 from tensorflow.keras.layers import Conv2D, MaxPool2D, Dense, Dropout, Flatten
 from tensorflow.keras.models import Sequential
 
@@ -23,5 +21,4 @@ def build_model(height, width):
     model.add(Dense(3, activation='softmax'))
 
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-
     return model
